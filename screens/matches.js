@@ -16,7 +16,7 @@ const Matches = ({navigation}) => {
       {/* <View style={{}}>
       <BottomButton navigation={navigation}/>
       </View> */}
-      {/* <View
+      <View
         style={{
           flex: 1,
           alignItems: 'flex-end',
@@ -30,7 +30,7 @@ const Matches = ({navigation}) => {
             alignItems: 'flex-end',
             position: 'absolute',
             bottom: 0,
-          }}> */}
+          }}>
           <View style={{flexDirection: 'column', marginBottom: 0}}>
             {show && (
               <View style={styles.container}>
@@ -65,8 +65,8 @@ const Matches = ({navigation}) => {
               <Text style={{color: '#000000'}}>Profile</Text>
             </TouchableOpacity>
           </View>
-        {/* </View>
-      </View> */}
+        </View>
+      </View>
     </View>
   );
 };
@@ -75,23 +75,15 @@ export default Matches;
 
 const styles = StyleSheet.create({
   container: {
-    // borderWidth: 1,
-    // alignSelf: 'flex-end',
-    // position: 'absolute',
-    // top: 518,
-    // left: 280,
+    borderWidth: 1,
+    alignSelf: 'flex-end',
   },
   profileStyle: {
-    flex: 1,
     backgroundColor: '#ffffff',
-    // position: 'absolute',
-    // top: 680,
-    // left: 275,
-    // bottom: 60,
-    // height: 60,
+    height: 60,
     alignItems: 'center',
     justifyContent: 'center',
-    // width: 120,
+    width: 120,
   },
   buttonStyle: {
     backgroundColor: 'blue',

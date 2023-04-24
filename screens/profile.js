@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 //import {SafeAreaView, View, Text} from 'react-native';
 //import FlatListBasics from '../ftlistView';
 //import MyList from '../ftlistView2';
 
 import CategoryGridTile from '../components/CategoryGridTile';
 
-import { CATEGORIES } from '../data/dummy-data';
+import {CATEGORIES} from '../data/dummy-data';
 
 import {
   SafeAreaView,
@@ -48,9 +48,9 @@ getMenu= (isVisible) => {
   }
 }
 */
-const Item = ({ title }) => (
+const Item = ({title}) => (
   <View style={styles.item}>
-    <Pressable style={({ pressed }) => [pressed ? styles.buttonPressed : null,]}>
+    <Pressable style={({pressed}) => [pressed ? styles.buttonPressed : null]}>
       <View>
         <Text style={styles.title}>{title}</Text>
       </View>
@@ -58,13 +58,13 @@ const Item = ({ title }) => (
   </View>
 );
 
-const ViewMenuWithColorAndText1 = ({ navigation }) => {
-  const [show, setShow] = useState(false)
+const ViewMenuWithColorAndText1 = ({navigation}) => {
+  const [show, setShow] = useState(false);
   function renderCategoryItem(itemData) {
     function pressHandler() {
-      if (itemData.item.id === "c1") {
+      if (itemData.item.id === 'c1') {
         navigation.navigate('opt1');
-      } else if (itemData.item.id === "c2") {
+      } else if (itemData.item.id === 'c2') {
         navigation.navigate('version');
       } else {
         navigation.navigate('aboutUs');
@@ -81,8 +81,8 @@ const ViewMenuWithColorAndText1 = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      {/* <View
+    <SafeAreaView style={{flex: 1}}>
+      <View
         style={{
           flex: 1,
           alignItems: 'flex-end',
@@ -96,7 +96,7 @@ const ViewMenuWithColorAndText1 = ({ navigation }) => {
             alignItems: 'flex-end',
             position: 'absolute',
             bottom: 0,
-          }}> */}
+          }}>
           {/* <View style={styles.container}> */}
           {/* <FlatList 
                         //data={DATA}
@@ -105,35 +105,46 @@ const ViewMenuWithColorAndText1 = ({ navigation }) => {
                         renderItem={renderCategoryItem}
                         keyExtractor={item => item.id}
                     /> */}
-          <View style={{ flexDirection: 'column', }}>
-            {show && <View style={styles.containerStyle}>
-              <TouchableOpacity onPress={() => navigation.navigate('home1')} style={styles.buttonStyle}>
-                <Text style={{ color: '#ffffff' }}>home1</Text>
-              </TouchableOpacity>
-              <View style={{ borderBottomWidth: 0.5 }} />
-              <TouchableOpacity onPress={() => navigation.navigate('opt1')} style={styles.buttonStyle}>
-                <Text style={{ color: '#ffffff' }}>opt1</Text>
-              </TouchableOpacity>
-              <View style={{ borderBottomWidth: 0.5 }} />
-              <TouchableOpacity onPress={() => navigation.navigate('version')} style={styles.buttonStyle}>
-                <Text style={{ color: '#ffffff' }}>version</Text>
-              </TouchableOpacity>
-              <View style={{ borderBottomWidth: 0.5 }} />
-              <TouchableOpacity onPress={() => navigation.navigate('aboutUs')} style={styles.buttonStyle}>
-                <Text style={{ color: '#ffffff' }}>aboutUs</Text>
-              </TouchableOpacity>
-            </View>}
-            <TouchableOpacity style={styles.profileStyle} onPress={() => setShow(!show)}>
-              <Text style={{ color: '#000000' }}>Profile</Text>
+          <View style={{flexDirection: 'column'}}>
+            {show && (
+              <View style={styles.containerStyle}>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('home1')}
+                  style={styles.buttonStyle}>
+                  <Text style={{color: '#ffffff'}}>home1</Text>
+                </TouchableOpacity>
+                <View style={{borderBottomWidth: 0.5}} />
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('opt1')}
+                  style={styles.buttonStyle}>
+                  <Text style={{color: '#ffffff'}}>opt1</Text>
+                </TouchableOpacity>
+                <View style={{borderBottomWidth: 0.5}} />
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('version')}
+                  style={styles.buttonStyle}>
+                  <Text style={{color: '#ffffff'}}>version</Text>
+                </TouchableOpacity>
+                <View style={{borderBottomWidth: 0.5}} />
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('aboutUs')}
+                  style={styles.buttonStyle}>
+                  <Text style={{color: '#ffffff'}}>aboutUs</Text>
+                </TouchableOpacity>
+              </View>
+            )}
+            <TouchableOpacity
+              style={styles.profileStyle}
+              onPress={() => setShow(!show)}>
+              <Text style={{color: '#000000'}}>Profile</Text>
             </TouchableOpacity>
           </View>
           {/* </View> */}
-
-        {/* </View>
-      </View> */}
+        </View>
+      </View>
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -159,9 +170,24 @@ const styles = StyleSheet.create({
     fontSize: 10,
     width: 100,
   },
-  containerStyle: { borderWidth: 1, alignSelf: 'flex-end', position: 'absolute', top: 478, left: 280 },
-  buttonStyle: { backgroundColor: 'blue', width: 110, height: 35, alignItems: 'center', justifyContent: 'center' },
-  profileStyle: { flex: 1, backgroundColor: '#ffffff', position: 'absolute', top: 643, left: 275, height: 60, alignItems: 'center', justifyContent: 'center', width: 120 }
+  containerStyle: {
+    borderWidth: 1,
+    alignSelf: 'flex-end',
+  },
+  buttonStyle: {
+    backgroundColor: 'blue',
+    width: 110,
+    height: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  profileStyle: {
+    backgroundColor: '#ffffff',
+    height: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 120,
+  },
 });
 
 export default ViewMenuWithColorAndText1;
