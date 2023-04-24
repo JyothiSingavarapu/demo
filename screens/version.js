@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const Version = ({ navigation }) => {
   const [show, setShow] = useState(false)

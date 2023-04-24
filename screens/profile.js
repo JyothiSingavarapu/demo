@@ -96,40 +96,40 @@ const ViewMenuWithColorAndText1 = ({ navigation }) => {
             alignItems: 'flex-end',
             position: 'absolute',
             bottom: 0,
-          }}>
-          <View style={styles.container}> */}
-      {/* <FlatList 
+          }}> */}
+          {/* <View style={styles.container}> */}
+          {/* <FlatList 
                         //data={DATA}
                         data={CATEGORIES}
                         //renderItem={({item}) => <Item title={item.title} />}
                         renderItem={renderCategoryItem}
                         keyExtractor={item => item.id}
                     /> */}
-      <View style={{ flexDirection: 'column', }}>
-        {show && <View style={styles.containerStyle}>
-          <TouchableOpacity onPress={() => navigation.navigate('home1')} style={styles.buttonStyle}>
-            <Text style={{ color: '#ffffff' }}>home1</Text>
-          </TouchableOpacity>
-          <View style={{ borderBottomWidth: 0.5 }} />
-          <TouchableOpacity onPress={() => navigation.navigate('opt1')} style={styles.buttonStyle}>
-            <Text style={{ color: '#ffffff' }}>opt1</Text>
-          </TouchableOpacity>
-          <View style={{ borderBottomWidth: 0.5 }} />
-          <TouchableOpacity onPress={() => navigation.navigate('version')} style={styles.buttonStyle}>
-            <Text style={{ color: '#ffffff' }}>version</Text>
-          </TouchableOpacity>
-          <View style={{ borderBottomWidth: 0.5 }} />
-          <TouchableOpacity onPress={() => navigation.navigate('aboutUs')} style={styles.buttonStyle}>
-            <Text style={{ color: '#ffffff' }}>aboutUs</Text>
-          </TouchableOpacity>
-        </View>}
-        <TouchableOpacity style={styles.profileStyle} onPress={() => setShow(!show)}>
-          <Text style={{ color: '#000000' }}>Profile</Text>
-        </TouchableOpacity>
-      </View>
-      {/* </View>
+          <View style={{ flexDirection: 'column', }}>
+            {show && <View style={styles.containerStyle}>
+              <TouchableOpacity onPress={() => navigation.navigate('home1')} style={styles.buttonStyle}>
+                <Text style={{ color: '#ffffff' }}>home1</Text>
+              </TouchableOpacity>
+              <View style={{ borderBottomWidth: 0.5 }} />
+              <TouchableOpacity onPress={() => navigation.navigate('opt1')} style={styles.buttonStyle}>
+                <Text style={{ color: '#ffffff' }}>opt1</Text>
+              </TouchableOpacity>
+              <View style={{ borderBottomWidth: 0.5 }} />
+              <TouchableOpacity onPress={() => navigation.navigate('version')} style={styles.buttonStyle}>
+                <Text style={{ color: '#ffffff' }}>version</Text>
+              </TouchableOpacity>
+              <View style={{ borderBottomWidth: 0.5 }} />
+              <TouchableOpacity onPress={() => navigation.navigate('aboutUs')} style={styles.buttonStyle}>
+                <Text style={{ color: '#ffffff' }}>aboutUs</Text>
+              </TouchableOpacity>
+            </View>}
+            <TouchableOpacity style={styles.profileStyle} onPress={() => setShow(!show)}>
+              <Text style={{ color: '#000000' }}>Profile</Text>
+            </TouchableOpacity>
+          </View>
+          {/* </View> */}
 
-        </View>
+        {/* </View>
       </View> */}
     </SafeAreaView>
   );
